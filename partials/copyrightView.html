@@ -1,0 +1,63 @@
+<footer>
+    <div class="row">
+        <div class="col-sm-5 col-sm-offset-1 hidden-xs">
+            <p class="leftFlex" ng-show="getUserType() == 'Merchant'">
+                Copyright © 2016 Glatfelter. All Rights Reserved. All values are USD.&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span ng-if="!(user.Permissions.contains('HideTerms'))">
+                    <a href="conditions">
+                        Terms and Conditions and Drawing Rules
+                    </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                <a href="contactus">
+                        Contact Us
+                    </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                    <a href="http://images.prograde.com/xl1/ExcelOne_Carbonless_Reward_Coupon.pdf" target="_blank">Invoice Fax Form</a>
+            </p>
+            <p class="leftFlex" ng-show="getUserType() == 'Dealer' || !user">
+                Copyright © 2016 Glatfelter. All Rights Reserved. All values are USD.&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span ng-if="!(user.Permissions.contains('HideTerms'))">
+                    <a href="conditions">
+                        Terms and Conditions
+                    </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                <a href="contactus">
+                        Contact Us
+                    </a><span ng-show="user">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                    <a href="http://images.prograde.com/xl1/ExcelOne_Carbonless_Reward_Coupon.pdf" target="_blank">Invoice Fax Form</a></span>
+            </p>
+        </div>
+        <div class="col-sm-5 hidden-xs">
+        <p class="rightFlex">
+            <img src="http://glatfelter.prograde.com/Site/GLTWorks2/Glatfelter-white.png" class="img-responsive" />
+            </p>
+        </div>
+    </div>
+    
+    
+    <div class="col-xs-12 visible-xs centered">
+            <p ng-show="getUserType() == 'Merchant'">
+                Copyright © 2016 Glatfelter. All Rights Reserved. All values are USD.&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span ng-if="!(user.Permissions.contains('HideTerms'))">
+                    <a href="conditions">
+                        Terms and Conditions and Drawing Rules</span>
+                    </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                <a href="contactus">
+                        Contact Us
+                    </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                    <a href="http://images.prograde.com/xl1/ExcelOne_Carbonless_Reward_Coupon.pdf" target="_blank">Invoice Fax Form</a>
+            </p>
+             <p ng-show="getUserType() == 'Dealer' || !user">
+                Copyright © 2016 Glatfelter. All Rights Reserved. All values are USD.&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span ng-if="!(user.Permissions.contains('HideTerms'))">
+                    <a href="conditions">
+                        Terms and Conditions</span>
+                    </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                <a href="contactus">
+                        Contact Us
+                    </a><span ng-show="user">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                    <a href="http://images.prograde.com/xl1/ExcelOne_Carbonless_Reward_Coupon.pdf" target="_blank">Invoice Fax Form</a></span>
+            </p>
+            
+        </div><!--
+        <div class="col-xs-12 visible-xs centered">
+        <p class="centered">
+            <img src="http://glatfelter.prograde.com/Site/GLTWorks2/Glatfelter-white.png" class="img-responsive centered" />
+            </p>
+        </div>-->
+    </div>
+    
+</footer>

@@ -1,0 +1,107 @@
+<div class="specialNav visible-sm visible-xs">
+	<a>
+		<span ng-click="openNav()"><i class="fa fa-bars" style="font-size:24pt;"></i></span>
+	</a>
+</div>
+
+<div class="specialNav right-align hidden-sm hidden-xs">
+
+                <a href back-step class="back animated fadeInLeft" ng-class="{'ng-hide': isActive('catalog')}">
+                    <i class="fa fa-arrow-left"></i>
+                </a>
+                
+                <a id="451qa_home_link" ng-show="Four51User.isAuthenticated() && isAdmin()" href="CSR">
+                    <i class="fa fa-check"></i>
+                    <span class="hidden-xs">{{'Verify Code' | rc}}</span>
+                </a>
+                        
+                <a id="451qa_home_link" ng-show="Four51User.isAuthenticated() && getUserType() == 'Merchant'" href="standings">
+                    <i class="fa fa-home"></i>
+                    <span class="hidden-xs">{{'Standings' | rc}}</span>
+                </a>
+                
+                <a id="451qa_home_link" ng-show="(Four51User.isAuthenticated() && getUserType() == 'Dealer') || isAdmin()" href="home">
+                    <i class="fa fa-home"></i>
+                    <span class="hidden-xs">{{'Home' | rc}}</span>
+                </a>
+                
+                <a id="451qa_products_link" ng-show="Four51User.isAuthenticated()" href="catalog">
+                    <i class="fa fa-desktop"></i>
+                    <span class="hidden-xs">{{'Products' | rc}}</span>
+                </a>
+                <a id="451qa_products_link" ng-show="Four51User.isAuthenticated()" href="order">
+                    <i class="fa fa-bar-chart-o"></i>
+                    <span class="hidden-xs">{{'Orders' | rc}}</span>
+                </a>
+                <a id="451qa_profile_link" ng-show="Four51User.isAuthenticated()" href="admin">
+                    <i class="fa fa-user"></i>
+                    <span class="hidden-xs">{{'Profile' | rc}}</span>
+                </a>
+
+                <a id="451qa_cont_link" href="contactus">
+                    <i class="fa fa-phone"></i>
+                    <span class="hidden-xs">{{'Contact Us' | r}}</span>
+                </a>
+          
+                <a id="451qa_acct_link" href="admin" class="hidden-md hidden-lg">
+                    <i class="fa fa-cog"></i>
+                    <span class="hidden-xs">{{'Account' | r}}</span>
+                </a>
+                <a href="#"  class="451_btn_logout" ng-click="Logout()">
+                            <i class="fa fa-power-off"></i>
+                            <span>{{'Log Out' | r}}</span>
+                </a>
+                <a id="451qa_cart_link" ng-show="cartCount" class="cart" href="cart">
+                    <span ng-bind="cartCount" class="badge"></span>
+                    <i class="fa fa-shopping-cart"></i>
+                </a>
+                <input autocomplete="off" ng-init="event = []" ng-keyup="event=$event" ng-model="navSearchTerm" placeholder="{{('Search' | r) | xlat}}" style="border-radius:3px;" type="text"> <a ng-disabled="!navSearchTerm" ng-href="search/{{navSearchTerm}}" style="display:inline;padding:0px;"><i class="fa fa-search" style="border:0px;"></i></a>
+            </div>
+			
+<div id="mySidenav" class="sidenav">
+
+				<a id="451qa_cont_link" href="search">
+                    <span>{{'Search' | r}}</span>
+                </a>
+				
+				<a href="javascript:void(0)" class="closebtn" ng-click="closeNav()">&times;</a>
+                
+				<a id="451qa_home_link" ng-show="Four51User.isAuthenticated() && isAdmin()" href="CSR">
+                    <span>{{'Verify Code' | rc}}</span>
+                </a>
+                        
+                <a id="451qa_home_link" ng-show="Four51User.isAuthenticated() && getUserType() == 'Merchant'" href="standings">
+                    <span>{{'Standings' | rc}}</span>
+                </a>
+                
+                <a id="451qa_home_link" ng-show="(Four51User.isAuthenticated() && getUserType() == 'Dealer') || isAdmin()" href="home">
+                    <span>{{'Home' | rc}}</span>
+                </a>
+                
+                <a id="451qa_products_link" ng-show="Four51User.isAuthenticated()" href="catalog">
+                    <span>{{'Products' | rc}}</span>
+                </a>
+				
+                <a id="451qa_products_link" ng-show="Four51User.isAuthenticated()" href="order">
+                    <span>{{'Orders' | rc}}</span>
+                </a>
+				
+                <a id="451qa_profile_link" ng-show="Four51User.isAuthenticated()" href="admin">
+                    <span>{{'Profile' | rc}}</span>
+                </a>
+
+                <a id="451qa_cont_link" href="contactus">
+                    <span>{{'Contact Us' | r}}</span>
+                </a>
+				
+                <a href="#"  class="451_btn_logout" ng-click="Logout()">
+                            <i class="fa fa-power-off"></i>
+                            <span>{{'Log Out' | r}}</span>
+                </a>
+				
+                <a id="451qa_cart_link" ng-show="cartCount" class="cart" href="cart">
+                    <span ng-bind="cartCount" class="badge"></span>
+                    <i class="fa fa-shopping-cart"></i>
+                </a>
+				
+            </div>

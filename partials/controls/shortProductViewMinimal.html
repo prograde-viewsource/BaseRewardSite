@@ -1,0 +1,21 @@
+<div class="451qa_prod_item row">
+    <div class="col-xs-12 text-center whiteBG">
+        <a class="thumbnail" href="product/{{LineItem.Product.InteropID}}">
+            <figure ng-show="LineItem.Variant.LargeImageUrl || LineItem.Product.LargeImageUrl" >
+                <img ng-src="{{LineItem.Variant.LargeImageUrl || LineItem.Product.LargeImageUrl}}"/>
+            </figure>
+            <div class="empty" ng-hide="LineItem.Variant.LargeImageUrl || LineItem.Product.LargeImageUrl">
+                <span class="fa empty"><i class="fa fa-camera"></i></span>
+            </div>
+        </a>
+    </div>
+    <div class="col-xs-12 text-left whiteText">
+            <p class="bigText">{{LineItem.PriceSchedule.PriceBreaks[0].Price}} {{'Score' | r}}</p>
+            <!--<p ng-bind-html="trustedDescription(LineItem.Product)" ng-show="LineItem.Product.Description" />-->
+            <span class="productName">{{LineItem.Product.Name}}</span>
+
+            <p ng-show="LineItem.Product.DisplayInventory && inventoryDisplay(LineItem.Product, LineItem.Variant) != undefined">
+                {{'Quantity Available' | r | xlat}}: {{inventoryDisplay(LineItem.Product, LineItem.Variant) }}
+            </p>
+    </div>
+</div>
